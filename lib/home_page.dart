@@ -62,6 +62,7 @@ class _MyHomePageState extends State<MyHomePage>
                   fontWeight: FontWeight.bold)),
           SizedBox(height: 15.0),
           TabBar(
+            physics: AlwaysScrollableScrollPhysics(),
               controller: _tabController,
               indicatorColor: Colors.transparent,
               labelColor: Color(0xFFC88D67),
@@ -94,7 +95,10 @@ class _MyHomePageState extends State<MyHomePage>
           Container(
               height: MediaQuery.of(context).size.height - 50.0,
               width: double.infinity,
-              child: TabBarView(controller: _tabController, children: [
+              child: TabBarView
+              
+              (physics: AlwaysScrollableScrollPhysics(),
+                controller: _tabController, children: [
                 Technical(),
                 Cultural(),
                 Extras(),
