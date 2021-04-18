@@ -84,15 +84,17 @@ class Cultural extends StatelessWidget {
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.end,
                   )),
-              Hero(
-                  tag: imgPath,
-                  child: Container(
-                      height: 75.0,
-                      width: 75.0,
-                      decoration: BoxDecoration(
-                          image: DecorationImage(
-                              image: AssetImage(imgPath),
-                              fit: BoxFit.contain)))),
+              Flexible(
+                              child: Hero(
+                    tag: imgPath,
+                    child: Container(
+                        height: 75.0,
+                        width: 75.0,
+                        decoration: BoxDecoration(
+                            image: DecorationImage(
+                                image: AssetImage(imgPath),
+                                fit: BoxFit.contain)))),
+              ),
               SizedBox(height: 35.0),
               Text(name,
                   style: TextStyle(
