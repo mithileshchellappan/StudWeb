@@ -59,7 +59,7 @@ class ExtrasDetail extends StatelessWidget {
             ),
             FlatButton(
               child: Center(
-                child: Text(''),
+                child: Text('Add Item'),
               ),
               onPressed:_launchURL1,
             )
