@@ -29,7 +29,7 @@ class _MyHomePageState extends State<MyHomePage>
   }
 
   _launchURL() async {
-    const url = '';
+    const url = 'https://equinox.iiitl.ac.in';
     if (await canLaunch(url)) {
       await launch(url, forceSafariVC: false, forceWebView: false);
     } else {
@@ -101,12 +101,15 @@ class _MyHomePageState extends State<MyHomePage>
               ]))
         ],
       ),
-      floatingActionButton: FloatingActionButton(
-        onPressed: _launchURL,
-        elevation: 10.0,
-        backgroundColor: Colors.black,
-        child: Image(
-          image: AssetImage('assets/iiiitl.png'),
+      floatingActionButton: Align(
+        alignment: Alignment.bottomCenter,
+              child: FloatingActionButton(
+          onPressed: _launchURL,
+          elevation: 10.0,
+          backgroundColor: Colors.black,
+          child: Image(
+            image: AssetImage('assets/iiitl.png'),
+          ),
         ),
       ),
 
